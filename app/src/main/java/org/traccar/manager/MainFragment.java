@@ -95,10 +95,7 @@ public class MainFragment extends WebViewFragment {
         webSettings.setDatabaseEnabled(true);
         webSettings.setMediaPlaybackRequiresUserGesture(false);
 
-        String url = PreferenceManager.getDefaultSharedPreferences(
-                getActivity()).getString(MainActivity.PREFERENCE_URL, null);
-
-        getWebView().loadUrl(url);
+        getWebView().loadUrl(BuildConfig.SERVICE_URL);
     }
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
